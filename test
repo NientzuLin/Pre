@@ -49,19 +49,3 @@ for i in range(len(input_list)):
 for sentence in result_sentences:
     print(sentence)
 
-
-# 獲取路徑
-desktop_path = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Data_Result')
-
-# 新檔案的路徑
-output_file_path = os.path.join(desktop_path, "result_output.txt")
-
-# 確保目錄存在
-os.makedirs(desktop_path, exist_ok=True)
-
-# 將結果寫入到新檔案中
-with open(output_file_path, "w", encoding="utf-8") as output_file:
-    for sentence in result_sentences:
-        output_file.write(sentence + "\n")
-
-print(f"結果已寫入到檔案中，位於 {output_file_path}")
